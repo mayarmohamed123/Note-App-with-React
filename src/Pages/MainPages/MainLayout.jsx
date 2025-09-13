@@ -6,7 +6,6 @@ import Home from "./Home/HomePage";
 export default function MainLayout() {
   return (
     <div>
-      g
       <Outlet />
     </div>
   );
