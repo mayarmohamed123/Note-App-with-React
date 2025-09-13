@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import NoteModel from "../../../assets/Components/NoteToolbar";
 import NotesCard from "../../../assets/Components/NotesCard";
 import { getUserNotes } from "../../../Services/notesServices";
+import Navbar from "../../../assets/Components/Navbar";
+import MainSection from "../../../assets/Components/MainSection";
 
 export default function HomePage() {
   const [notes, setNotes] = useState();
@@ -24,6 +26,8 @@ export default function HomePage() {
 
   return (
     <div>
+      <Navbar />
+      <MainSection />
       <NoteModel />
       <NotesCard notes={notes} getNotes={getNotes} />
     </div>
