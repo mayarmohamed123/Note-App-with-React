@@ -28,7 +28,7 @@ export default function HomePage() {
     <div>
       <Navbar />
       <MainSection />
-      <NoteModel />
+      <NoteModel getNotes={getNotes} />
       <NotesCard notes={notes} getNotes={getNotes} />
     </div>
   );

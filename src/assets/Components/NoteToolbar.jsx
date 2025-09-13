@@ -13,7 +13,7 @@ import {
 import { Search, Plus } from "lucide-react";
 import { addNoteApi } from "../../Services/notesServices";
 
-export default function NotesToolbar() {
+export default function NotesToolbar({ getNotes }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -37,6 +37,7 @@ export default function NotesToolbar() {
       });
 
       console.log("Note created:", response);
+      await getNotes();
 
       if (response?.msg?.includes("validation failed")) {
         setError("Both title and content are required.");

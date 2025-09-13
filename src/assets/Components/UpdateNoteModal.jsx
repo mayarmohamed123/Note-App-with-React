@@ -35,7 +35,7 @@ export default function UpdateNoteModal({
       setIsLoading(true);
       const response = await updateNoteApi(note._id, formData);
       if (response.msg === "done") {
-        getNotes();
+        await getNotes();
         onOpenChange();
       }
     } finally {
