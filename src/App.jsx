@@ -1,4 +1,4 @@
-import { createBrowserRouter, Router, RouterProvider } from "react-router";
+import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
 import "./App.css";
 import React from "react";
 import AuthLayout from "./Pages/AuthPages/AuthLayout";
@@ -41,7 +41,6 @@ function App() {
           index: true,
           element: (
             <ProtectedRoutes>
-              {" "}
               <HomePage />
             </ProtectedRoutes>
           ),
