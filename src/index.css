@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin './hero.js';
+
+/* include HeroUI theme so tailwind v4 sees them */
+@source "../node_modules/@heroui/theme/dist";
+
+/* if needed for dark theme variants, etc. */
+@custom-variant dark (&:is(.dark *));
+
+/* other global style overrides / font definitions etc. */
